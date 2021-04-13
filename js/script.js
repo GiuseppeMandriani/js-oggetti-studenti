@@ -24,12 +24,65 @@ $(document).ready(function(){
 
 
         // Utilizzo for in per iterare all'interno dell'oggetto 
-        
+
         for ( var key in studente){
             // console.log(key)                            // Per visualizzare tutte le proprietà dell'oggetto
             // console.log(studente[key]);                    // Per visualizzare i valori delle proprietà dell'oggetto
             console.log(key, studente[key]);            // Per visualizzare proprietà e valori dell'oggetto
 
+        }
+
+
+        // Fase 2 Creazione Array di Oggetti e ciclare all'interno dell'Array
+
+        var listaStudenti = [
+            {
+                Nome: 'Giuseppe',
+                Cognome: 'Mandriani',
+                Età: 32,
+                Residenza: 'Crema',
+                Provincia: 'CR',
+            },
+            {
+                Nome: 'Davide',
+                Cognome: 'Chicco',
+                Età: 25,
+                Residenza: 'Milano',
+                Provincia: 'MI',
+            },
+            {
+                Nome: 'Sara',
+                Cognome: 'Preziosa',
+                Età: 30,
+                Residenza: 'Foggia',
+                Provincia: 'FG',
+            },
+            {
+                Nome: 'Michele',
+                Cognome: 'Vece',
+                Età: 31,
+                Residenza: 'Pavia',
+                Provincia: 'PV,'
+            }
+
+        ]
+
+        // console.log(listaStudenti);  // Stampo Array
+
+        // Ciclo all'interno dell'array per poi stampare determinate chiavi degli oggetti
+
+        for(var i = 0; i < listaStudenti.length; i++){
+
+            // Stampo ogni singolo oggetto
+            console.log(listaStudenti[i]); 
+
+
+            // Stampo il valore delle chiavi/proprietà che desidero
+            console.log('Studente: ' + listaStudenti[i].Nome + ' ' + listaStudenti[i].Cognome );
+
+            // for (var key in listaStudenti[i]){
+            //     console.log(key, listaStudenti[i][key]);
+            // }
         }
 
 
