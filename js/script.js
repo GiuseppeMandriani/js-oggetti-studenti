@@ -112,7 +112,7 @@ $(document).ready(function(){
         // Inserimento nell'array
         listaStudenti.push( student );
 
-        // Itero nell'arrey precedente e stampo contenuto completo
+        // Itero nell'arrey precedente e stampo contenuto array completo
         for(var i=0; i<listaStudenti.length; i++){
             var studenti = listaStudenti[i];
 
