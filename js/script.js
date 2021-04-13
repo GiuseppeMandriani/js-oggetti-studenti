@@ -73,17 +73,67 @@ $(document).ready(function(){
 
         for(var i = 0; i < listaStudenti.length; i++){
 
+            var studenti = listaStudenti[i];
+
             // Stampo ogni singolo oggetto
-            console.log(listaStudenti[i]); 
+            // console.log(listaStudenti[i]); 
 
 
             // Stampo il valore delle chiavi/proprietà che desidero
-            console.log('Studente: ' + listaStudenti[i].Nome + ' ' + listaStudenti[i].Cognome );
+            console.log('Studente: ' + studenti.Nome + ' ' + studenti.Cognome );
 
-            // for (var key in listaStudenti[i]){
-            //     console.log(key, listaStudenti[i][key]);
+
+            // Itero all'interno per stamparmi tutte le propriettà e i relativi valori delgli oggetti
+            //  for (var key in listaStudenti[i]){
+            //      console.log(key, listaStudenti[i][key]);
             // }
         }
+
+
+        // Fase 3 Richiesta dati all'utente e inserimento nell'array precedente
+
+
+        // Richiesta Dati
+        
+        var name = prompt('Inserire Nome');
+        
+        var cognome = prompt('inserire Cognome');
+        
+        var anni = parseInt(prompt('Inserire anni'));
+        
+        var student ={
+            Nome: (name),
+            Cognome:(cognome),
+            Età:(anni),
+        };
+
+        console.log(student);
+
+        // Inserimento nell'array
+        listaStudenti.push( student );
+
+        // Itero nell'arrey precedente e stampo contenuto completo
+        for(var i=0; i<listaStudenti.length; i++){
+            var studenti = listaStudenti[i];
+
+            // console.log(listaStudenti[i]);
+
+            console.log('Studente: ' + studenti.Nome + ' ' + studenti.Cognome + ' ' + studenti.Età );
+
+
+            // for( var key in studenti){
+            //     console.log(key, listaStudenti[i][key])
+
+            // }
+
+
+        }
+
+
+
+
+
+
 
 
 
